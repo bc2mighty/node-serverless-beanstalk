@@ -14,7 +14,7 @@ app.use(
 
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/test', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+mongoose.connect('mongodb+srv://2mighty:phil4verse13@cluster0.n9vjh.mongodb.net/blog_everyone', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
