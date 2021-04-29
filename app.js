@@ -40,6 +40,10 @@ app.get("/comments/all", async (req, res) => {
     return res.status(200).json({message: 'All Comments', comments})
 })
 
+app.get("/feature1", async (req, res) => {
+    return res.status(200).json({message: 'Testing Feature 1'})
+})
+
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
