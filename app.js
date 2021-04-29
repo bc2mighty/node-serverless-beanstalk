@@ -35,6 +35,11 @@ app.get("/comments", async (req, res) => {
   })
 })
 
+app.get("/comments/all", async (req, res) => {
+    const comments = await Comment.find({})
+    return res.status(200).json({message: 'All Comments', comments})
+})
+
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
