@@ -4,7 +4,7 @@ const superagent = require('superagent')
 const Comment = require("./model/comment")
 const User = require("./model/user")
 const { Validator } = require('node-input-validator');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 
 const app = express()
