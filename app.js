@@ -48,6 +48,10 @@ app.get("/feature1", async (req, res) => {
     return res.status(200).json({message: 'Testing Feature 1'})
 })
 
+app.get("/feature2", async (req, res) => {
+    return res.status(200).json({message: 'Testing Feature 2'})
+})
+
 app.post("/register", async (req, res) => {
   try {
     const v = new Validator(req.body, {
@@ -72,8 +76,4 @@ app.post("/register", async (req, res) => {
   }
 })
 
-const port = process.env.PORT || 4000;
-
-app.listen(port, () => {
-	console.log(`listening on port ${port}`);
-});
+module.exports = app
